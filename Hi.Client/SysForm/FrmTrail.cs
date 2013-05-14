@@ -32,6 +32,7 @@ namespace Hi.Client
 
         private void FrmTrail_Load(object sender, EventArgs e)
         {
+            //Test
         }
 
         private void btnSumbit_Click(object sender, EventArgs e)
