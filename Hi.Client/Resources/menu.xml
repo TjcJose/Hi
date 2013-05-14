@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml>
+	<row module_code="sys01" module_name="系统设置(＆S)" module_url="" module_quanxian="Y" module_target="" module_short="" remark="">
+    <row module_code="Client" module_name="服务器设置" module_url="" module_quanxian="Y" module_target="_blank" module_short="" image="server" remark=""/>
+	<row module_code="DbConfig" module_name="连接数据库" module_url="" module_quanxian="Y" module_target="_blank" module_short="" image="db" remark=""/>
+    <row module_code="sys0101" module_name="" module_url="" module_quanxian="" module_target="" module_short="" image="" remark=""/>
+    <row module_code="UserInfo" module_name="用户信息" module_url="" module_quanxian="Y" module_target="_blank" module_short="" image="my" remark=""/>
+    <row module_code="ReLogin" module_name="切换用户" module_url="" module_quanxian="Y" module_target="_blank" module_short="Y" image="users" remark=""/>
+  </row>
+
+  <row module_code="sys05" module_name="查询统计(＆Q)" module_url="" module_quanxian="N" module_target="" module_short="" remark="">
+    <row module_code="OrderQuery" module_name="预约查询" module_url="" module_quanxian="N" module_target="" module_short="Y" image="orderquery" remark=""/>
+    <row module_code="MemberQuery" module_name="客户查询" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+    <row module_code="sys0501" module_name="" module_url="" module_quanxian="" module_target="" module_short="" image="" remark=""/>
+    <row module_code="PayQuery" module_name="收款流水账(＆P)" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+    <row module_code="Collect" module_name="汇总统计(＆C)" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+
+  </row>
+	<row module_code="sys04" module_name="系统管理(＆M)" module_url="" module_quanxian="N" module_target="" module_short="" remark="">
+		<row module_code="Org" module_name="部门维护" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+		<row module_code="sys0501" module_name="" module_url="" module_quanxian="" module_target="" module_short="" image="" remark=""/>
+		<row module_code="Params" module_name="系统参数" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+		<row module_code="Admin" module_name="权限设置" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+		<row module_code="User" module_name="系统用户" module_url="" module_quanxian="N" module_target="" module_short="" image="" remark=""/>
+	</row>
+	
+</xml>

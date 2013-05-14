@@ -1,0 +1,5 @@
+D:\学习\C#\参考资料\source\AgileDevelop51program\依赖类库\Hi.Winform.dll
+D:\学习\C#\参考资料\source\AgileDevelop51program\依赖类库\Hi.Winform.pdb
+D:\学习\C#\参考资料\source\AgileDevelop51program\Hi.Winform\obj\Debug\ResolveAssemblyReference.cache
+D:\学习\C#\参考资料\source\AgileDevelop51program\Hi.Winform\obj\Debug\Hi.Winform.dll
+D:\学习\C#\参考资料\source\AgileDevelop51program\Hi.Winform\obj\Debug\Hi.Winform.pdb

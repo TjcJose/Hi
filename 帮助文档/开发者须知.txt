@@ -1,0 +1,65 @@
+一、类和方法采用Pascal风格
+  1、类:由表名首字母大写
+  2、属性：字段首字母大写（可根据代码器选项设置，字段小写、大写或首字母大写）
+  3、系统全局变量：属性格式Get+变量（首字母大写）
+  4、模块全局变量：命名如属性或_+变量（首字母大写）
+  5、局面变量：全部小写如user_id
+
+二、文件命名规则
+  1、列表文件：Frm+表名首字母大写+List
+  2、编辑文件：Frm+表名首字母大写+Edit
+  3、查询文件：Frm+表名首字母大写+Query
+
+三、常用控件命名规则
+ 建议是使用控件名简写作为前缀，并且简写的首字母小写，符合Camel规范。
+
+格式：控件名简写+英文描述，英文描述首字母大写
+
+主要控件名简写对照表
+
+Label                       lbl
+TextBox                     txt
+Button                      btn
+CheckBox                    chk
+RadioButton                 rdo
+CheckBoxList                chklst
+RadioButtonList             rdolst
+ListBox                     lst
+ComboBox                    cmb
+DropDownList                ddl
+DataGrid                    dg
+DataList                    dl
+Image                       img
+Table                       tbl
+Panel                       pnl
+LinkButton                  lnkbtn
+ImageButton                 imgbtn
+Calender                    cld
+AdRotator                   ar
+RequiredFieldValidator      rfv
+CompareValidator            cv
+RangeValidator              rv
+RegularExpressionValidator  rev
+ValidatorSummary            vs
+CrystalReportViewer         rptvew 
+
+四、变量定义
+
+数据类型  前缀	例子
+integer	 int	intQuantity
+long	 lng	lngDistance
+Decimal	 dec	decNumber
+Float	 flt	fltNumber
+Object	 obj	objCurrent
+Boolean	 bln	blnFound
+String	 str	strFName
+Datetime dtm	dtmOne
+Bit	     bit	bitNumber
+Byte	 byt	bytRasterData
+Char	 chr	chrName
+Cursor	 cur	curRevenue
+error	 err	errOrderNum
+Money	 mny	mnyHoot
+Single	 sng	sngAverage
+Text	 txt	txtArea
+User-def udt	udtEmployee

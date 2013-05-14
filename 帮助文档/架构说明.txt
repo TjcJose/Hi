@@ -1,0 +1,50 @@
+一、开源源码地址：
+  http://www.oksvn.com/Project/Detail-9375.shtml
+  svn地址：svn://www.oksvn.com/51program
+  申请加入团队，共享所有源码,
+  下载安装AnkhSvn源码管理插件,
+  在Vs2010指定源码管理插件为AnkhSvn(步骤：工具-选项-source control)
+二、代码器下载
+   http://www.51program.net
+三、解决方案文件夹说明：
+   1.代码器插件：本项目源码根据项目模板+插件自动生成,可根据自己项目风格自行修改（编译成功，复制到“51编程”安装目录Plugin）
+   2.数据库文档:以相同数据库结构，不同的数据库类型提供案例学习如access、MsSql、Oracle、MySql、sqlite等
+   3.依赖类库：常用公共函数类等
+四、源码架构说明:
+   1、公共类
+	   Hi.Common 公共函数类
+	   Hi.UserControlEx  自定义用户控件，
+	   Hi.ConsoleTest  控制台进行测试
+   2、业务类
+       Hi.Model：实体类
+	   Hi.BLL  业务处理逻辑，继承MarshalByRefObject，使remoting共享使用
+	   Hi.DAL.数据库类型（Hi.DAL.Access表示access数据库） 数据访问层
+	   Hi.IDAL 数据访问接口
+	   Hi.DALFactory 抽象工厂类
+    3、服务类
+	   Hi.Services.BLL WebServices业务逻辑类
+   
+	   Hi.Remoting.Common 客户端与服务端通信协调公共类
+	   Hi.Remoting.BLL Remoting业务逻辑类
+
+五、配置文件说明
+   1.*.bak
+      保存数据库链接字符串文件,数据库链接失败，请先删除本地相应的数据库文件如Access.bak,再重新启动链接
+   2.配置文件App.Config
+      DbConfigFile:数据库配置文件路径，默认在根目录config下
+      DbConnectionString:数据库连接
+	  DbProvider:连接驱动
+	  Access or MsSql：根据数据库类型读取不同数据层
+	  ProjectName:项目名称
+	  Project_namespace：项目命名空间
+	  UpdateXml:在线升级路径
+   3.系统菜单menu.xml
+     module_code:菜单编码（以窗体命名有关，区分大小写）如窗体名称FrmUserInfo，则定义为UserInfo
+	 module_name:系统名称
+	 module_url:打开网址，包含http://将Ie打开
+	 module_quanxian：Y表示不受用户权限限制
+	 module_target：打开窗体模式，_blank以模态窗口,反之在tabPage中嵌套打开
+	 module_short：Y 在工具栏显示快捷键,反之不显示
+	 remark:模块说明
+六、登录系统
+   用户名及密码：admin/123456

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3726B4B9-A15F-4582-B7C9-D658A8076872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hi.Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <PublishUrl>http://localhost/HiVisitor/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2011.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Client.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Client.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Hi.Common, Version=2011.4.26.20, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\依赖类库\Hi.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Hi.UserControlEx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\依赖类库\Hi.UserControlEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSXML2, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>bin\Interop.MSXML2.dll</HintPath>
+    </Reference>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>bin\IrisSkin2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\BaseFormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseFormEdit.Designer.cs">
+      <DependentUpon>BaseFormEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseFormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseFormList.Designer.cs">
+      <DependentUpon>BaseFormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysForm\FrmTrail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmTrail.Designer.cs">
+      <DependentUpon>FrmTrail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmUser.designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmUserEdit.designer.cs">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmUserInfo.Designer.cs">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmOrg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmOrg.Designer.cs">
+      <DependentUpon>FrmOrg.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm\BaseFormEdit.resx">
+      <DependentUpon>BaseFormEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseFormList.resx">
+      <DependentUpon>BaseFormList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmParams.resx">
+      <DependentUpon>FrmParams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmPurviewDetailEdit.resx">
+      <DependentUpon>FrmPurviewDetailEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmServerUrl.resx">
+      <DependentUpon>FrmServerUrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmSysParam.resx">
+      <DependentUpon>FrmSysParam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmReLogin.resx">
+      <DependentUpon>FrmReLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SysForm\FrmTrail.resx">
+      <DependentUpon>FrmTrail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmUserEdit.resx">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmUserInfo.resx">
+      <DependentUpon>FrmUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmOrg.resx">
+      <DependentUpon>FrmOrg.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Config\Config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Config\Update.ini" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Public\HiBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Public\ModuleData.cs" />
+    <Compile Include="Public\Printer.cs" />
+    <Compile Include="Public\SysInfo.cs" />
+    <Compile Include="SysForm\FrmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmAdmin.Designer.cs">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmParams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmParams.Designer.cs">
+      <DependentUpon>FrmParams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmPurviewDetailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmPurviewDetailEdit.designer.cs">
+      <DependentUpon>FrmPurviewDetailEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmServerUrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmServerUrl.Designer.cs">
+      <DependentUpon>FrmServerUrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmSysParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmSysParam.Designer.cs">
+      <DependentUpon>FrmSysParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysForm\FrmReLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmReLogin.Designer.cs">
+      <DependentUpon>FrmReLogin.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\Update.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="logo.ico" />
+    <None Include="Resources\exit.bmp" />
+    <None Include="Resources\err.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\home.png" />
+    <Content Include="Resources\ie.ico" />
+    <Content Include="Resources\loading.gif" />
+    <None Include="Resources\lock.png" />
+    <Content Include="Resources\logo.ico" />
+    <Content Include="Resources\logobg.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\menu.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\my.png" />
+    <Content Include="Resources\no.jpg" />
+    <None Include="Resources\print.png" />
+    <Content Include="Resources\screen.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\server.png" />
+    <Content Include="Resources\uninstall.ico" />
+    <None Include="Resources\up.png" />
+    <Content Include="Resources\user.bmp" />
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hi.BLL\Hi.BLL.csproj">
+      <Project>{BB837660-FA68-47B8-B099-97A4977DAFD8}</Project>
+      <Name>Hi.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.DAL.Access\Hi.DAL.Access.csproj">
+      <Project>{ED7FFFBD-DFE5-41DC-9B76-7E61356925D4}</Project>
+      <Name>Hi.DAL.Access</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.DAL.MsSql\Hi.DAL.MsSql.csproj">
+      <Project>{FD0B2583-EE5C-4810-9323-700B9B508EEB}</Project>
+      <Name>Hi.DAL.MsSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.DALFactory\Hi.DALFactory.csproj">
+      <Project>{3C7B6992-D4B2-4309-9DA6-4048BADD89D3}</Project>
+      <Name>Hi.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.IBLL\Hi.IBLL.csproj">
+      <Project>{E9BA6135-33B4-4C59-B213-F5B6BEFFF50F}</Project>
+      <Name>Hi.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.IDAL\Hi.IDAL.csproj">
+      <Project>{4BA1CCE4-9A6F-4C2A-8B9C-338EFC5149D5}</Project>
+      <Name>Hi.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.Model\Hi.Model.csproj">
+      <Project>{16A24E46-1FDA-4AF1-8B46-C0C68813409A}</Project>
+      <Name>Hi.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hi.Remoting.Common\Hi.Remoting.Common.csproj">
+      <Project>{2860B404-2AB5-46E1-AF11-FFD0962379D2}</Project>
+      <Name>Hi.Remoting.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Example\" />
+    <Folder Include="Modules\" />
+    <Folder Include="Report\" />
+    <Folder Include="Skin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

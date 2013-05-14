@@ -1,0 +1,88 @@
+51编程C#敏捷开发框架源码
+
+C#敏捷开发框架源码特点
+1.基本多层抽象工厂模式架构设计，
+2.支持Access、Sql Server、Oracle、Sqlite、MySql等多种常见数据库
+3.动态生成系统菜单
+4.动态反射打开Winform窗体
+5.可扩展支持Remoting、Web Services、Asp.net等不同结构系统
+6.所有数据层、UI层代码由“51编程.代码器”自动生成
+7.源码中包含“代码器”插件源码及模板源码，可自行修改
+
+******************学习代码前请阅读<帮助文档>目录下的说明文件******************
+
+一、开源源码地址：
+  http://www.oksvn.com/Project/Detail-9375.shtml
+  svn地址：svn://www.oksvn.com/51program
+  申请加入团队，共享所有源码,
+  下载安装AnkhSvn源码管理插件,
+  在Vs2010指定源码管理插件为AnkhSvn(步骤：工具-选项-source control)
+二、代码器下载
+   http://www.51program.net
+三、解决方案文件夹说明：
+   1.代码器插件：本项目源码根据项目模板+插件自动生成,可根据自己项目风格自行修改（编译成功，复制到“51编程”安装目录Plugin）
+   2.数据库文档:以相同数据库结构，不同的数据库类型提供案例学习如access、MsSql、Oracle、MySql、sqlite等
+   3.依赖类库：常用公共函数类等
+四、源码架构说明:
+   1、公共类
+	   Hi.Common 公共函数类
+	   Hi.UserControlEx  自定义用户控件，
+	   Hi.ConsoleTest  控制台进行测试
+   2、业务类
+       Hi.Model：实体类
+	   Hi.BLL  业务处理逻辑，继承MarshalByRefObject，使remoting共享使用
+	   Hi.DAL.数据库类型（Hi.DAL.Access表示access数据库） 数据访问层
+	   Hi.IDAL 数据访问接口
+	   Hi.DALFactory 抽象工厂类
+    3、服务类
+	   Hi.Services.BLL WebServices业务逻辑类
+   
+	   Hi.Remoting.Common 客户端与服务端通信协调公共类
+	   Hi.Remoting.BLL Remoting业务逻辑类
+
+五、配置文件说明
+   1.*.bak
+      保存数据库链接字符串文件,数据库链接失败，请先删除本地相应的数据库文件如Access.bak,再重新启动链接
+   2.配置文件App.Config
+      DbConfigFile:数据库配置文件路径，默认在根目录config下
+      DbConnectionString:数据库连接
+	  DbProvider:连接驱动
+	  Access or MsSql：根据数据库类型读取不同数据层
+	  ProjectName:项目名称
+	  Project_namespace：项目命名空间
+	  UpdateXml:在线升级路径
+   3.系统菜单menu.xml
+     module_code:菜单编码（以窗体命名有关，区分大小写）如窗体名称FrmUserInfo，则定义为UserInfo
+	 module_name:系统名称
+	 module_url:打开网址，包含http://将Ie打开
+	 module_quanxian：Y表示不受用户权限限制
+	 module_target：打开窗体模式，_blank以模态窗口,反之在tabPage中嵌套打开
+	 module_short：Y 在工具栏显示快捷键,反之不显示
+	 remark:模块说明
+六、登录系统
+   用户名及密码：admin/123456
+
+
+作者:liangsx
+下载地址：http://win.51aspx.com/CV/AgileDevelop51program
+
+                ╭═══════════════╮
+                ║        Asp.net源码网         ║
+  ╭══════┤     http://www.51aspx.com    ├══════╮
+  ║            ║ 论坛:http://bbs.51aspx.com   ║            ║
+  ║            ╰═══════════════╯            ║
+　║                                                          ║
+　║51aspx声明：                                              ║
+  ║   1) 本站不保证所提供软件或程序的完整性和安全性。        ║
+  ║   2) 转载本站提供的资源请勿删除本说明文件。              ║
+  ║   3) 本站提供的程序均为网上搜集，如果该代码涉及或侵害到您║
+  ║      的版权请立即写信通知我们。                          ║
+  ║   4) 本站提供代码只可供研究使用，请在下载24小时内删除,   ║
+  ║      切勿用于商业用途，由此引起一切后果与本站无关。      ║
+  ║   5) 如果源码有升级或修补，我们会在本站进行，恕不另行通知║
+　║                                                          ║
+  ║           本站专注于Asp.net源码下载                      ║
+  ║           联系方式 : support@51aspx.com                  ║
+  ║    ╭───────────────────────╮    ║
+  ╰══┤  Asp.net源码网 http://www.51aspx.com         ├══╯
+        ╰───────────────────────╯
