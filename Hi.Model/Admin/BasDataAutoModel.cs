@@ -16,6 +16,8 @@ namespace Hi.Model.Admin
             
         }
 
+        public string Id { get; set; }
+
         public string MgMonth { get; set; }
 
         public string MgDay { get; set; }
