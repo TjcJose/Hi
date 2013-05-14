@@ -15,7 +15,6 @@ namespace Hi.DAL.Access
      [Serializable]
     public class User : IUser
     {
-       
         // Methods
         public User()
         {
