@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
-using Hi.Model.Admin;
+using Hi.Model;
 
 namespace Hi.IDAL
 {

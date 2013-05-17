@@ -17,19 +17,6 @@ namespace Hi.Client
             InitializeComponent();
         }
 
-        /// <summary>
-        /// 重写获取详细事件
-        /// </summary>
-        private Hi.Model.BasTrail SetDetail()
-        {
-            Hi.Model.BasTrail model = new Hi.Model.BasTrail();
-            //从画面取值
-            model.OrgName = this.textBox1.Text.Trim();
-            model.ParentId = this.textBox2.Text.Trim();
-
-            return model;
-        }
-
         private void FrmTrail_Load(object sender, EventArgs e)
         {
             //Test!
@@ -47,6 +34,19 @@ namespace Hi.Client
             {
                 MessageBox.Show("Fail!");
             }
+        }
+
+        /// <summary>
+        /// 重写获取详细事件
+        /// </summary>
+        private Hi.Model.BasTrail SetDetail()
+        {
+            Hi.Model.BasTrail model = new Hi.Model.BasTrail();
+            //从画面取值
+            model.OrgName = this.textBox1.Text.Trim();
+            model.ParentId = this.textBox2.Text.Trim();
+
+            return model;
         }
     }
 }

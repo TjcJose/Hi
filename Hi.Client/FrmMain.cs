@@ -33,6 +33,7 @@ using System.Xml;
 using System.Diagnostics;
 using System.IO;
 using System.Configuration;
+using Hi.Client.SysForm;
 using Hi.Common;
 
 namespace Hi.Client
@@ -127,8 +128,12 @@ namespace Hi.Client
                 this.uclblMsg.Text = "¾ÍÐ÷";
                 InitThread(); 
             }
+
             FrmTrail frmttt = new FrmTrail();
             frmttt.Show();
+
+            FrmDataAuto frmDataAuto = new FrmDataAuto();
+            frmDataAuto.Show();
         }
 
         /// <summary>

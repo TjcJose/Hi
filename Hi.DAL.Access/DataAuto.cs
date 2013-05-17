@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Hi.IDAL;
-using Hi.Model.Admin;
+using Hi.Model;
 
 namespace Hi.DAL.Access
 {
@@ -30,25 +31,26 @@ namespace Hi.DAL.Access
             strb.Append("MG_Month, ");
             strb.Append("MG_Day, ");
             strb.Append("MG_Hour, ");
-            strb.Append("MG_Minite, ");
+            strb.Append("MG_Minites, ");
             strb.Append("MG_Distance, ");
-            strb.Append("MG_Power, ");
+            strb.Append("MG_Power ");
             strb.Append(" )");
             strb.Append(" Values( ");
-            strb.Append("" + Hi.Common.Utils.IsNull(model.MgMonth, "0") + ", ");
+            strb.Append("" + model.MgMonth + ", ");
             strb.Append("'" + model.MgDay + "', ");
             strb.Append("'" + model.MgHour + "', ");
             strb.Append("'" + model.MgMinites + "', ");
             strb.Append("'" + model.MgDistance + "', ");
-            strb.Append("'" + model.MgPower + "', ");
+            strb.Append("'" + model.MgPower + "' ");
             strb.Append(" )");
 
             try
             {
                 return DataBase.ExecuteNonQuery(strb.ToString()) > 0 ? true : false;
             }
-            catch
+            catch(Exception ex)
             {
+                Debug.WriteLine(ex.Message);
                 return false;
             }
         }
@@ -74,6 +76,8 @@ namespace Hi.DAL.Access
             {
                 throw ex;
             }
+
+            return blFlag;
         }
 
         public bool Delete(BasDataAuto model)

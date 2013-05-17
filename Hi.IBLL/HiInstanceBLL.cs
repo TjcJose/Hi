@@ -102,5 +102,10 @@ namespace Hi.IBLL
         {
             return new BLL.TrailBll();
         }
+
+        public static Hi.BLL.DataAuto DataAutoBLL()
+        {
+            return new BLL.DataAuto();
+        }
     }
 }

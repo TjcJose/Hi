@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Hi.Model.Admin
+namespace Hi.Model
 {
     [Serializable]
     public class BasDataHand

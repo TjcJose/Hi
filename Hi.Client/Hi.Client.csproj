@@ -164,6 +164,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SysForm\FrmDataAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysForm\FrmDataAuto.Designer.cs">
+      <DependentUpon>FrmDataAuto.cs</DependentUpon>
+    </Compile>
     <Compile Include="SysForm\FrmTrail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SysForm\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysForm\FrmDataAuto.resx">
+      <DependentUpon>FrmDataAuto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SysForm\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

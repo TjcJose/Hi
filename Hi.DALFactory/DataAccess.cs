@@ -24,7 +24,7 @@ namespace Hi.DALFactory
     /// </summary>
     public class DataAccess
     {
-        protected static string path = ConfigurationManager.AppSettings["DAL"];//Hi.Common.Db.DbUtils.Dal;
+        protected static string path = ConfigurationManager .AppSettings["DAL"];    //Hi.Common.Db.DbUtils.Dal;
 
         #region 查询
         public static IDataQuery CreateDataQuery()
@@ -78,6 +78,16 @@ namespace Hi.DALFactory
         {
             string className = path + ".OrgDAL";
             return (IOrg)Assembly.Load(path).CreateInstance(className);
+        }
+
+        #endregion
+
+        #region 手动数据、自动数据管理类
+
+        public static IDataAuto CreateDataAuto()
+        {
+            var className = path + ".DataAuto";
+            return (IDataAuto)Assembly.Load(path).CreateInstance(className);
         }
 
         #endregion

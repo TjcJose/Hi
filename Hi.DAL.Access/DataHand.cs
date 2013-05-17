@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using Hi.IDAL;
-using Hi.Model.Admin;
+using Hi.Model;
 
 namespace Hi.DAL.Access
 {

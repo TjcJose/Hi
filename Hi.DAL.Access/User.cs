@@ -20,6 +20,7 @@ namespace Hi.DAL.Access
         {
 
         }
+
         public bool Exists(string strWhere)
         {
             string strSql = " select count(*) from bas_user where 1=1 " + strWhere;
