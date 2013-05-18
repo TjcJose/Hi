@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
-using Hi.Common;
 namespace Hi.Client
 {
     public partial class FrmTrail : Form
@@ -17,34 +10,23 @@ namespace Hi.Client
             InitializeComponent();
         }
 
-        private void FrmTrail_Load(object sender, EventArgs e)
-        {
-            //Test!
-        }
-
         private void btnSumbit_Click(object sender, EventArgs e)
         {
-            bool blResult;
-            blResult = Hi.IBLL.HiInstanceBll.TrailBll().TrailUpdate(SetDetail());
-            if (blResult)
-            {
-                MessageBox.Show("Success");
-            }
-            else
-            {
-                MessageBox.Show("Fail!");
-            }
+            bool blResult = IBLL.HiInstanceBll.TrailBll().TrailUpdate(SetDetail());
+            MessageBox.Show(!blResult ? "Fail!" : "Success");
         }
 
         /// <summary>
         /// 重写获取详细事件
         /// </summary>
-        private Hi.Model.BasTrail SetDetail()
+        private Model.BasTrail SetDetail()
         {
-            Hi.Model.BasTrail model = new Hi.Model.BasTrail();
             //从画面取值
-            model.OrgName = this.textBox1.Text.Trim();
-            model.ParentId = this.textBox2.Text.Trim();
+            var model = new Model.BasTrail
+                {
+                    OrgName  = textBox1.Text.Trim(),
+                    ParentId = textBox2.Text.Trim()
+                };
 
             return model;
         }
