@@ -64,9 +64,13 @@ namespace Hi.Client
             DbConfig dbconfig = Hi.Common.Db.DbUtils.LoadFromBinaryFile(Hi.Common.Db.DbUtils.DbConfigFile);
             //Hi.Common.Db.DbUtils.ProviderName = DbProviderName;
             //Hi.Common.Db.DbUtils.ConnectionString = DbConnectionString;
-            Hi.Common.Db.DbUtils.ProviderName = dbconfig.DbProviderName;
-            Hi.Common.Db.DbUtils.ConnectionString = dbconfig.ConnectionString;
+            Hi.Common.Db.DbUtils.ProviderName = "System.Data.OleDb";
+            String dbPath = Application.StartupPath.Substring(0, Application.StartupPath.Length - 23) + "数据库\\Data\\data.mdb;";
+
+            Hi.Common.Db.DbUtils.ConnectionString ="Provider=Microsoft.Jet.OLEDB.4.0;User ID=;Password=;Data Source=" + dbPath;
+           
             Hi.Common.Db.DbUtils.Dal = ConfigurationManager.AppSettings[dbconfig.DbType];
+
         }
         #region 连接Remoting结构控制台
         //private static IHiCoordinator _IHiCoordinator = null;
