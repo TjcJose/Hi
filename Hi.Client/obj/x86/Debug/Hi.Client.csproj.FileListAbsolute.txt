@@ -210,4 +210,4 @@ F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.Fr
 F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.FrmUserInfo.resources
 F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.FrmOrg.resources
 F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.csproj.GenerateResource.Cache
-F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.SysForm.FrmDataAuto.resources
+F:\Solution\北京天地星火\AgileDevelop\Hi.Client\obj\x86\Debug\Hi.Client.SysForm.FrmDataAutoHand.resources

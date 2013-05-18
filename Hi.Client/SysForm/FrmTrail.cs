@@ -25,7 +25,7 @@ namespace Hi.Client
         private void btnSumbit_Click(object sender, EventArgs e)
         {
             bool blResult;
-            blResult = Hi.IBLL.HiInstanceBLL.TrailBLL().TrailUpdate(SetDetail());
+            blResult = Hi.IBLL.HiInstanceBll.TrailBll().TrailUpdate(SetDetail());
             if (blResult)
             {
                 MessageBox.Show("Success");

@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataAuto.cs" />
+    <Compile Include="DataHand.cs" />
     <Compile Include="Org.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

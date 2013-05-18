@@ -109,7 +109,7 @@ namespace Hi.Client
             bool blResult = false;
            
             Hi.Model.BasUser model = new Model.BasUser();
-            model = Hi.IBLL.HiInstanceBLL.UserBLL().Detail(user_code);
+            model = Hi.IBLL.HiInstanceBll.UserBll().Detail(user_code);
             if (model != null && Utils.StrToInt(model.UserId)>0 && model.UserPassword == MD5.MD5Encrypt(password.Trim()))
             {
                 AppSetting.SysOption.UserId = model.UserId;

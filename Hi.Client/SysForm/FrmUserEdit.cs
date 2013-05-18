@@ -52,7 +52,7 @@ namespace Hi.Client
         {
            
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            DataSet ds = Hi.IBLL.HiInstanceBLL.BasOrgBLL().List(dict, 1, 100);
+            DataSet ds = Hi.IBLL.HiInstanceBll.BasOrgBll().List(dict, 1, 100);
             if (ds == null || ds.Tables.Count == 0)
                 return;
             this.cmbDepartment.DataSource = ds.Tables[0];
@@ -78,7 +78,7 @@ namespace Hi.Client
                 this.txtUsercode.Enabled = false;
             }
             Hi.Model.BasUser model = new Hi.Model.BasUser();
-            model = Hi.IBLL.HiInstanceBLL.UserBLL().Detail(this.IdValue);
+            model = Hi.IBLL.HiInstanceBll.UserBll().Detail(this.IdValue);
             if (model == null)
                 return;
             this.txtUsercode.Text = model.UserCode;
@@ -169,12 +169,12 @@ namespace Hi.Client
             
             if (string.IsNullOrEmpty(this.IdValue))
             {
-                blResult = Hi.IBLL.HiInstanceBLL.UserBLL().Add(SetDetail()) ;
+                blResult = Hi.IBLL.HiInstanceBll.UserBll().Add(SetDetail()) ;
                 this.MsgStr = "ÐÂÔö";
             }
             else
             {
-                blResult = Hi.IBLL.HiInstanceBLL.UserBLL().Update(SetDetail() );
+                blResult = Hi.IBLL.HiInstanceBll.UserBll().Update(SetDetail() );
                 this.MsgStr = "ÐÞ¸Ä";
             }
             if (blResult)
@@ -233,7 +233,7 @@ namespace Hi.Client
             {
                 strWhere += " and userid<>" + this.IdValue;
             }
-            blResult = Hi.IBLL.HiInstanceBLL.UserBLL().Exists(strWhere);
+            blResult = Hi.IBLL.HiInstanceBll.UserBll().Exists(strWhere);
             if (blResult)
                 MsgBox.ShowInformation(strMsg);
             return blResult;

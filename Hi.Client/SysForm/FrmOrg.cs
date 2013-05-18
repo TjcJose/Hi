@@ -37,7 +37,7 @@ namespace Hi.Client
             this.treeView1.Nodes.Clear();
             Dictionary<string, string> dict = new Dictionary<string, string>();
 
-            _DataSet = Hi.IBLL.HiInstanceBLL.BasOrgBLL().List(dict, 1, 1000);
+            _DataSet = Hi.IBLL.HiInstanceBll.BasOrgBll().List(dict, 1, 1000);
            
             TreeNode parent = new TreeNode();
             parent.Tag = 0;
@@ -174,12 +174,12 @@ namespace Hi.Client
 
             if (string.IsNullOrEmpty(this.IdValue))
             {
-                blResult = Hi.IBLL.HiInstanceBLL.BasOrgBLL().Add(SetDetail());
+                blResult = Hi.IBLL.HiInstanceBll.BasOrgBll().Add(SetDetail());
                 strMsg = "新增";
             }
             else
             {
-                blResult = Hi.IBLL.HiInstanceBLL.BasOrgBLL().Update(SetDetail());
+                blResult = Hi.IBLL.HiInstanceBll.BasOrgBll().Update(SetDetail());
                 strMsg = "修改";
             }
             if (blResult)
@@ -232,7 +232,7 @@ namespace Hi.Client
                 MsgBox.ShowInformation("请先从子选项内容开始删除！");
                 return;
             }
-            bool blFlag = Hi.IBLL.HiInstanceBLL.SysAdminBLL().ParamDelete(this.IdValue);
+            bool blFlag = Hi.IBLL.HiInstanceBll.SysAdminBll().ParamDelete(this.IdValue);
             if (blFlag)
             {
                 this.treeView1.Nodes.Remove(_CurTreeNode);

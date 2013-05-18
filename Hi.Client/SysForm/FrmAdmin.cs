@@ -100,7 +100,7 @@ namespace Hi.Client
         {
 
             Dictionary<string, string> dict = new Dictionary<string, string>();
-            _DsUser = Hi.IBLL.HiInstanceBLL.UserBLL().List(dict, 1, 1000, "");
+            _DsUser = Hi.IBLL.HiInstanceBll.UserBll().List(dict, 1, 1000, "");
             if (_DsUser == null || _DsUser.Tables[0].Rows.Count == 0)
                 return;
             TreeNode child;
@@ -268,7 +268,7 @@ namespace Hi.Client
                 strPurview = strPurview.Remove(strPurview.Length - 1);
 
 
-            bool blFlag = Hi.IBLL.HiInstanceBLL.UserBLL().UpdatePurview(_CurrentTreeNode.Tag.ToString(), strPurview);
+            bool blFlag = Hi.IBLL.HiInstanceBll.UserBll().UpdatePurview(_CurrentTreeNode.Tag.ToString(), strPurview);
             if (blFlag)
             {
                 if (AppSetting.SysOption.UserId == _CurrentTreeNode.Tag.ToString())
@@ -293,7 +293,7 @@ namespace Hi.Client
                 if (_CurrentTreeNode.Level == 1)
                 {
                     this.btnSave.Enabled = false;
-                    Hi.Model.BasUser model = Hi.IBLL.HiInstanceBLL.UserBLL().Detail(_CurrentTreeNode.Name);
+                    Hi.Model.BasUser model = Hi.IBLL.HiInstanceBll.UserBll().Detail(_CurrentTreeNode.Name);
                     this.lblInfo.Text = "正在设置“" + _CurrentTreeNode .Text+ "”操作权限.";
                     SetPurview(model.Purview);
                     this.btnSave.Enabled = true;

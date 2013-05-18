@@ -132,7 +132,7 @@ namespace Hi.Client
             FrmTrail frmttt = new FrmTrail();
             frmttt.Show();
 
-            FrmDataAuto frmDataAuto = new FrmDataAuto();
+            FrmDataAutoHand frmDataAuto = new FrmDataAutoHand();
             frmDataAuto.Show();
         }
 

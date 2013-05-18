@@ -6,9 +6,9 @@ using Hi.Model;
 namespace Hi.BLL
 {
     [Serializable]
-    public class DataAuto : MarshalByRefObject
+    public class DataHand : MarshalByRefObject
     {
-        private readonly IDataAuto _dal = DataAccess.CreateDataAuto();
+        private readonly IDataHand _dal = DataAccess.CreateDataHand();
 
         #region 成员方法
 
@@ -17,7 +17,7 @@ namespace Hi.BLL
             return _dal.Exists(strWhere);
         }
 
-        public bool Add(BasDataAuto model)
+        public bool Add(BasDataHand model)
         {
             return _dal.Add(model);
         }

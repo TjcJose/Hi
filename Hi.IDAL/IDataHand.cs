@@ -18,21 +18,21 @@ namespace Hi.IDAL
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        bool Add(BasDataAuto model);
+        bool Add(BasDataHand model);
 
         /// <summary>
         /// 更新一条数据
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        bool UpDate(BasDataAuto model);
+        bool UpDate(BasDataHand model);
 
         /// <summary>
         ///  删除一条数据
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        bool Delete(BasDataAuto model);
+        bool Delete(BasDataHand model);
 
         /// <summary>
         /// 得到一个实体对象

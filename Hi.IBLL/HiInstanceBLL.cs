@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Configuration;
 
 using Hi.Common;
 using Hi.Remoting.Common;
 namespace Hi.IBLL
 {
-    public class HiInstanceBLL
+    public class HiInstanceBll
     {
-        private static string ClientType = ConfigurationManager.AppSettings["ClientType"];
+        private static readonly string ClientType = ConfigurationManager.AppSettings["ClientType"];
 
         #region Remoting对象
-        private static IHiCoordinator _IHiCoordinator = null;
-        private static EventWrapper _Wrapper = null;
-        public static string _MessageInfo = null;
+        private static IHiCoordinator _iHiCoordinator;
+        private static EventWrapper _wrapper;
+        public static string MessageInfo = null;
         public static ChannelModel ChannelDetail { get; set; }
         public static IHiCoordinator GetInstance()
         {
@@ -23,43 +20,42 @@ namespace Hi.IBLL
             {
                 if (ChannelDetail == null)
                     return null;
-                if (_IHiCoordinator == null)
+                if (_iHiCoordinator == null)
                     MsgBox.ShowInformation(ChannelDetail.Ip + "服务可能已经停止!");
 
-                return _IHiCoordinator;
+                return _iHiCoordinator;
             }
             catch (Exception ex)
             {
-                MsgBox.ShowInformation("请确保已成功连接" + ChannelDetail.Ip + ":" + ex.Message);
+                if (ChannelDetail != null) 
+                    MsgBox.ShowInformation("请确保已成功连接" + ChannelDetail.Ip + ":" + ex.Message);
                 return null;
             }
         }
         public static void SetDisConnection()
         {
-            _IHiCoordinator = null;
+            _iHiCoordinator = null;
         }
         public static bool ConnectionServer(ChannelModel model)
         {
             //获取远程对象
-            ChannelGroup channelGroup;
-            if (model.ChannelGroupType == "1")
-                channelGroup = ChannelGroup.TCP;
-            else
-                channelGroup = ChannelGroup.HTTP;
+            var channelGroup = model.ChannelGroupType == "1" ? ChannelGroup.TCP : ChannelGroup.HTTP;
             string protocol = "tcp";
             if (channelGroup == ChannelGroup.HTTP) protocol = "http";
             string uri = GetServerUrl(protocol, model);
             try
             {
                 ChannelClass.StartChannel(channelGroup, model.ChannelName);
-                _IHiCoordinator = Activator.GetObject(typeof(IHiCoordinator), uri) as IHiCoordinator;
+                _iHiCoordinator = Activator.GetObject(typeof(IHiCoordinator), uri) as IHiCoordinator;
 
-                _Wrapper = new EventWrapper();
-                _Wrapper.Server2ClientEvent += new IServer2ClientEventHandler(GetServerMessage);
-                _IHiCoordinator.Server2ClientEvent += new IServer2ClientEventHandler(_Wrapper.OnServer2ClientEvent);
+                _wrapper = new EventWrapper();
+                _wrapper.Server2ClientEvent += GetServerMessage;
+                if (_iHiCoordinator != null)
+                    _iHiCoordinator.Server2ClientEvent += _wrapper.OnServer2ClientEvent;
                 ChannelDetail = model;
-                string client_name = Hi.Common.ChannelClass.GetMyHostName();
-                _IHiCoordinator.IClient2Server(client_name + "成功连接服务");
+                string clientName = ChannelClass.GetMyHostName();
+                if (_iHiCoordinator != null) 
+                    _iHiCoordinator.IClient2Server(clientName + "成功连接服务");
                 return true;
             }
             catch (Exception ex)
@@ -74,7 +70,7 @@ namespace Hi.IBLL
         }
         private static void GetServerMessage(string msg)
         {
-            _MessageInfo = msg;
+            MessageInfo = msg;
         }
         #endregion
 
@@ -82,30 +78,43 @@ namespace Hi.IBLL
         /// 实例化用户类
         /// </summary>
         /// <returns></returns>
-        public static Hi.BLL.User UserBLL()
+        public static BLL.User UserBll()
         {
             if (ClientType == "1")
                 return GetInstance().UserBLL();
-            else
-                return new BLL.User();
+            return new BLL.User();
         }
-        public static Hi.BLL.SysAdmin SysAdminBLL()
+
+        public static BLL.SysAdmin SysAdminBll()
         {
             return new BLL.SysAdmin();
         }
-        public static Hi.BLL.OrgBLL BasOrgBLL()
+        public static BLL.OrgBLL BasOrgBll()
         {
             return new BLL.OrgBLL();
         }
 
-        public static Hi.BLL.TrailBll TrailBLL()
+        public static BLL.TrailBll TrailBll()
         {
             return new BLL.TrailBll();
         }
 
-        public static Hi.BLL.DataAuto DataAutoBLL()
+        /// <summary>
+        /// 实例化自动数据类
+        /// </summary>
+        /// <returns></returns>
+        public static BLL.DataAuto DataAutoBll()
         {
             return new BLL.DataAuto();
+        }
+
+        /// <summary>
+        /// 实例化手动数据类
+        /// </summary>
+        /// <returns></returns>
+        public static BLL.DataHand DataHandBll()
+        {
+            return new BLL.DataHand();
         }
     }
 }

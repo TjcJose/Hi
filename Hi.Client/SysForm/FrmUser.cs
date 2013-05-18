@@ -23,14 +23,8 @@
 
 using System;
 using System.Collections.Generic;
-using System.Collections;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
-
 using Hi.Common;
 
 namespace Hi.Client
@@ -64,13 +58,13 @@ namespace Hi.Client
             {
                 Dictionary<string, string> dict = new Dictionary<string, string>();
                 //Hashtable dict = new Hashtable();
-                int totalcount = Hi.IBLL.HiInstanceBLL.UserBLL().TotalCount(dict);
+                int totalcount = Hi.IBLL.HiInstanceBll.UserBll().TotalCount(dict);
                 this.pageDataGridViewEx1.TotalCount = totalcount;
                 if (totalcount > 0)
                 {
                     this.pageDataGridViewEx1.SetPageButton(true);
 
-                    DataSet ds = Hi.IBLL.HiInstanceBLL.UserBLL().List(dict, this.pageDataGridViewEx1.CurrentPage, this.pageDataGridViewEx1.PageSize, "");
+                    DataSet ds = Hi.IBLL.HiInstanceBll.UserBll().List(dict, this.pageDataGridViewEx1.CurrentPage, this.pageDataGridViewEx1.PageSize, "");
 
                     if (ds != null)
                     {
@@ -157,7 +151,7 @@ namespace Hi.Client
                 }
             }
 
-            bool blFlag = Hi.IBLL.HiInstanceBLL.UserBLL().Delete(id);
+            bool blFlag = Hi.IBLL.HiInstanceBll.UserBll().Delete(id);
             
             if (blFlag)
             {

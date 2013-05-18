@@ -10,13 +10,12 @@
 --------------------------------------------------------------------------------------------------
 
 */
-using System;
-using System.Text;
+
 using System.Reflection;
 using System.Configuration;
 
 using Hi.IDAL;
-using Hi.Model;
+
 namespace Hi.DALFactory
 {
     /// <summary>
@@ -24,28 +23,28 @@ namespace Hi.DALFactory
     /// </summary>
     public class DataAccess
     {
-        protected static string path = ConfigurationManager .AppSettings["DAL"];    //Hi.Common.Db.DbUtils.Dal;
+        protected static string Path = ConfigurationManager .AppSettings["DAL"];    //Hi.Common.Db.DbUtils.Dal;
 
         #region 查询
         public static IDataQuery CreateDataQuery()
         {
-            string className = path + ".DataQuery";
-            return (IDataQuery)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".DataQuery";
+            return (IDataQuery)Assembly.Load(Path).CreateInstance(className);
         }
         #endregion
 
         #region 系统基本类
         public static IUser CreateUser()
         {
-            string className = path + ".User";
-            return (IUser)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".User";
+            return (IUser)Assembly.Load(Path).CreateInstance(className);
         }
 
 
         public static ILog CreateLog()
         {
-            string className = path + ".Log";
-            return (ILog)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".Log";
+            return (ILog)Assembly.Load(Path).CreateInstance(className);
         }
 
 
@@ -55,8 +54,8 @@ namespace Hi.DALFactory
         /// <returns></returns>
         public static ISysAdmin CreateSysAdmin()
         {
-            string className = path + ".SysAdmin";
-            return (ISysAdmin)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".SysAdmin";
+            return (ISysAdmin)Assembly.Load(Path).CreateInstance(className);
         }
 
         /// <summary>
@@ -65,8 +64,8 @@ namespace Hi.DALFactory
         /// <returns></returns>
         public static ITrail CreateTrail()
         {
-            string className = path + ".TrailDal";
-            return (ITrail)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".TrailDal";
+            return (ITrail)Assembly.Load(Path).CreateInstance(className);
         }
 
 
@@ -76,8 +75,8 @@ namespace Hi.DALFactory
         /// <returns></returns>
         public static IOrg CreateOrg()
         {
-            string className = path + ".OrgDAL";
-            return (IOrg)Assembly.Load(path).CreateInstance(className);
+            string className = Path + ".OrgDAL";
+            return (IOrg)Assembly.Load(Path).CreateInstance(className);
         }
 
         #endregion
@@ -86,8 +85,14 @@ namespace Hi.DALFactory
 
         public static IDataAuto CreateDataAuto()
         {
-            var className = path + ".DataAuto";
-            return (IDataAuto)Assembly.Load(path).CreateInstance(className);
+            var className = Path + ".DataAuto";
+            return (IDataAuto)Assembly.Load(Path).CreateInstance(className);
+        }
+
+        public static IDataHand CreateDataHand()
+        {
+            var className = Path + ".DataHand";
+            return (IDataHand)Assembly.Load(Path).CreateInstance(className);
         }
 
         #endregion

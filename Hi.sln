@@ -14,14 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hi.Remoting.Common", "Hi.Remoting.Common\Hi.Remoting.Common.csproj", "{2860B404-2AB5-46E1-AF11-FFD0962379D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "帮助文档", "帮助文档", "{F1048566-F251-4822-915B-F786A021DDD3}"
-	ProjectSection(SolutionItems) = preProject
-		帮助文档\C#敏捷开发框架.jpeg = 帮助文档\C#敏捷开发框架.jpeg
-		帮助文档\C#编程规范.txt = 帮助文档\C#编程规范.txt
-		帮助文档\help.html = 帮助文档\help.html
-		帮助文档\temp.html = 帮助文档\temp.html
-		帮助文档\开发者须知.txt = 帮助文档\开发者须知.txt
-		帮助文档\架构说明.txt = 帮助文档\架构说明.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "依赖类库", "依赖类库", "{A07C05F1-C6CE-4327-BF2C-170192DE238C}"
 	ProjectSection(SolutionItems) = preProject
